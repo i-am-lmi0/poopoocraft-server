@@ -20,3 +20,23 @@ externalPort = 80
 [[ports]]
 localPort = 25577
 externalPort = 3000
+
+[workflows]
+runButton = "Start Minecraft Server"
+
+[[workflows.workflow]]
+name = "Start Minecraft Server"
+author = 42846402
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd server && java -Xmx1G -jar server.jar nogui &"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "sleep 10"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd bungee && java -Xmx512M -jar bungee.jar"
