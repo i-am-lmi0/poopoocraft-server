@@ -1,11 +1,6 @@
-{ pkgs }: {
-  deps = [
-    pkgs.bashInteractive
-    pkgs.jq
-    pkgs.curl
-    pkgs.wget
-    pkgs.git
-    pkgs.tmux
-    pkgs.openjdk8
-  ];
-}
+run = ["bash", "main.sh"]
+
+entrypoint = "main.sh"
+
+[nix]
+channel = "stable-22_11"
