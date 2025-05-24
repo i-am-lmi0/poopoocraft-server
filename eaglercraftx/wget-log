@@ -1,0 +1,11 @@
+--2025-05-24 16:05:39--  http://www.modcoderpack.com/files/mcp918.zip
+Resolving www.modcoderpack.com (www.modcoderpack.com)... 148.251.90.105
+Connecting to www.modcoderpack.com (www.modcoderpack.com)|148.251.90.105|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8429228 (8.0M) [application/zip]
+Saving to: ‘/tmp/mcp918.zip’
+
+/tmp/mcp918.zip      86%[===============>   ]   6.98M  4.76MB/s               /tmp/mcp918.zip     100%[==================>]   8.04M  5.44MB/s    in 1.5s    
+
+2025-05-24 16:05:41 (5.44 MB/s) - ‘/tmp/mcp918.zip’ saved [8429228/8429228]
+

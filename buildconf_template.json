@@ -19,5 +19,12 @@
 	"offlineDownloadTemplate": "BASEDIR/eaglercraftx/sources/setup/workspace_template/javascript/OfflineDownloadTemplate.txt",
 	"keepTemporaryFiles": false,
 	"writeSourceMap": true,
-	"minifying": true
+	"minifying": true,
+	"client": {
+		"obfuscate": false,
+		"websocket": "wss://poopoocraft.repl.co:3000",
+		"resources": "client/assets",
+		"output": "/tmp/output",
+		"website": "client"
+	}
 }

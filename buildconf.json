@@ -1,13 +1,13 @@
 {
-	"repositoryFolder": "/home/runner/eaglercraftx/eaglercraftx",
+	"repositoryFolder": "/home/runner/workspace/eaglercraftx",
 	"modCoderPack": "/tmp/mcp918.zip",
 	"minecraftJar": "/tmp/1.8.8.jar",
 	"assetsIndex": "/tmp/1.8.json",
 	"outputDirectory": "/tmp/output",
 	"temporaryDirectory": "/tmp/##EAGLER.TEMP##",
 	"ffmpeg": "ffmpeg",
-	"productionIndex": "/home/runner/eaglercraftx/eaglercraftx/buildtools/production-index-ext.html",
-	"productionFavicon": "/home/runner/eaglercraftx/eaglercraftx/buildtools/production-favicon.png",
+	"productionIndex": "/home/runner/workspace/eaglercraftx/buildtools/production-index-ext.html",
+	"productionFavicon": "/home/runner/workspace/eaglercraftx/buildtools/production-favicon.png",
 	"addScripts": [
 		"eaglercraft_opts.js"
 	],
@@ -16,8 +16,15 @@
 	"mavenURL": "https://repo1.maven.org/maven2/",
 	"mavenLocal": "/tmp/teavm",
 	"generateOfflineDownload": true,
-	"offlineDownloadTemplate": "/home/runner/eaglercraftx/eaglercraftx/sources/setup/workspace_template/javascript/OfflineDownloadTemplate.txt",
+	"offlineDownloadTemplate": "/home/runner/workspace/eaglercraftx/sources/setup/workspace_template/javascript/OfflineDownloadTemplate.txt",
 	"keepTemporaryFiles": false,
 	"writeSourceMap": true,
-	"minifying": true
+	"minifying": true,
+	"client": {
+		"obfuscate": false,
+		"websocket": "wss://poopoocraft.repl.co:3000",
+		"resources": "client/assets",
+		"output": "/tmp/output",
+		"website": "client"
+	}
 }
