@@ -78,8 +78,9 @@ WF_URL="https://api.papermc.io/v2/projects/waterfall/versions/$WF_VERSION/builds
 wget -O bungee-new.jar "$WF_URL"
 mv bungee-new.jar bungee.jar
 
-# Fix config port
-sed -i "s/host: .*:[0-9]\+/host: 0.0.0.0:25577/" config.yml
+# Fix config port for Render
+PORT=${PORT:-25577}
+sed -i "s/host: .*:[0-9]\+/host: 0.0.0.0:$PORT/" config.yml
 
 # Start Bungee server
 tmux new -d -s server "$JAVA_BIN -Xmx128M -jar bungee.jar; tmux kill-session -t server"
