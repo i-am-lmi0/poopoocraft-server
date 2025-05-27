@@ -78,7 +78,7 @@ WF_URL="https://api.papermc.io/v2/projects/waterfall/versions/$WF_VERSION/builds
 wget -O bungee-new.jar "$WF_URL"
 mv bungee-new.jar bungee.jar
 
-# Fix config port for Render
+# Dynamically set host port from Render's PORT env variable
 PORT=${PORT:-25577}
 sed -i "s/host: .*:[0-9]\+/host: 0.0.0.0:$PORT/" config.yml
 
@@ -97,7 +97,12 @@ fi
 
 cd ..
 
-# Attach session
-while tmux has-session -t server; do
-  tmux a -t server
+# Don't attach tmux session (Render doesn't allow interactive terminals)
+# while tmux has-session -t server; do
+#   tmux a -t server
+# done
+
+# Keep the container alive
+while true; do
+  sleep 60
 done
