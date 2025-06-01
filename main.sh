@@ -80,7 +80,7 @@ mv bungee-new.jar bungee.jar
 
 # Dynamically set host port from Render's PORT env variable
 PORT=${PORT:-25577}
-sed -i "s/host: .*:[0-9]\+/host: 0.0.0.0:$PORT/" config.yml
+sed -i "s/host: .*:[0-9]\+/host: 0.0.0.0:$PORT/" bungee/config.yml
 
 # Start Bungee server
 tmux new -d -s server "$JAVA_BIN -Xmx128M -jar bungee.jar; tmux kill-session -t server"
